@@ -1,0 +1,43 @@
+<table class="table" border id="<%= dom_id friend %>">
+  <tr>
+    <th>
+      <strong>Name:</strong>
+    </th>
+    <th>
+      <strong>Phone:</strong>
+    </th>
+    <th>
+      <strong>Email:</strong>
+    </th>
+    <th>
+      <strong>Twitter:</strong>
+    </th>
+    <th>
+      <strong>user_id:</strong>
+    </th>
+    <th></th>
+  </tr>
+  <tr>
+    <td>
+      <%= link_to friend.first_name + ' ' + friend.last_name, friend %>
+    </td>
+
+    <td>
+      <%= friend.email %>
+    </td>
+
+    <td>
+      <%= friend.phone %>
+    </td>
+
+    <td>
+      <%= friend.twitter %>
+    </td>
+    <td>
+      <%= friend.user_id %>
+    </td>
+    <td>
+      <%= link_to "Delete", friend, method: :delete, class: "btn btn-sm btn-outline-danger" %>
+    </td>
+</tr>
+</table>

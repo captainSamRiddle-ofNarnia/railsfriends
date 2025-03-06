@@ -1,0 +1,24 @@
+<% if user_signed_in? %>
+
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Friends" %>
+
+<h1>Friends</h1>
+
+<div id="friends">
+  <% @friends.each do |friend| %>
+    <%= render friend %>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "Add Friend", new_friend_path, class: "btn btn-secondary"  %>
+</div>
+
+<% else %>
+
+<h1>Hello World!</h1>
+this is my first rails webpage....
+
+<% end %>
